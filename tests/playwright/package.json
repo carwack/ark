@@ -4,10 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test:vue:pw": "cross-env PACKAGE_NAME=vue PORT=6006 playwright test --trace on",
-		"test:vue:pw:ui": "cross-env PACKAGE_NAME=vue PORT=6006 playwright test --ui",
-		"test:react:pw": "playwright test tests/react/ --trace on",
-		"test:react:pw:ui": "playwright test tests/react/ --ui",
+		"test:pw": "playwright test --trace on",
+		"test:pw:ui": "playwright test --ui",
 		"test:pw:update": "playwright test --trace on --update-snapshots"
 	},
 	"keywords": [],

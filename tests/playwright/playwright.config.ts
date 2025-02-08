@@ -15,10 +15,10 @@ import { defineConfig, devices } from "@playwright/test";
  *
  * This also makes it clear which port is in use, and allows for easy modification.
  */
-const port =
-	process.env.PORT && !Number.isNaN(Number(process.env.PORT))
-		? process.env.PORT
-		: "3000";
+// const port =
+// 	process.env.PORT && !Number.isNaN(Number(process.env.PORT))
+// 		? process.env.PORT
+// 		: "3000";
 
 // const packageName = process.env.PACKAGE_NAME && !(process.env.PACKAGE_NAME)
 //   ? process.env.PACKAGE_NAME
