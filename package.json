@@ -19,7 +19,8 @@
 		"solid": "bun run --cwd packages/solid",
 		"svelte": "bun run --cwd packages/svelte",
 		"vue": "bun run --cwd packages/vue",
-		"web": "bun run --cwd website"
+		"web": "bun run --cwd website",
+		"tests:playwright": "bun run --cwd tests/playwright"
 	},
 	"dependencies": {
 		"root": "."
