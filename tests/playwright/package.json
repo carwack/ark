@@ -6,7 +6,9 @@
 	"scripts": {
 		"test:pw": "playwright test --trace on",
 		"test:pw:ui": "playwright test --ui",
-		"test:pw:update": "playwright test --trace on --update-snapshots"
+		"test:pw:update": "playwright test --trace on --update-snapshots",
+		"react:storybook": "bun run --cwd ../../packages/react storybook",
+		"vue:storybook": "bun run --cwd ../../packages/vue storybook"
 	},
 	"keywords": [],
 	"author": "",

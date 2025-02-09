@@ -94,4 +94,18 @@ export default defineConfig({
 	//   url: 'http://127.0.0.1:3000',
 	//   reuseExistingServer: !process.env.CI,
 	// },
+	webServer: [
+		{
+			command: "bun react:storybook",
+			url: "http://localhost:6006",
+			timeout: 120 * 1000,
+			reuseExistingServer: !process.env.CI,
+		},
+		{
+			command: "bun vue:storybook",
+			url: "http://localhost:6007",
+			timeout: 120 * 1000,
+			reuseExistingServer: !process.env.CI,
+		},
+	],
 });
