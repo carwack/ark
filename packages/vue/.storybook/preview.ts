@@ -10,6 +10,8 @@ const preview: Preview = {
 		},
 		layout: "padded",
 	},
+
+	tags: ["autodocs"],
 };
 
 export default preview;
