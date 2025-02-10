@@ -8,8 +8,8 @@ const config: StorybookConfig = {
 			name: "@storybook/addon-essentials",
 			options: { backgrounds: false, controls: false, actions: false },
 		},
-		getAbsolutePath("@storybook/addon-a11y"),
-		"@chromatic-com/storybook",
+		// getAbsolutePath("@storybook/addon-a11y"),
+		// "@chromatic-com/storybook",
 	],
 	framework: {
 		name: getAbsolutePath("@storybook/vue3-vite"),
