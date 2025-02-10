@@ -1,4 +1,3 @@
-import { dirname, join } from "node:path";
 import type { StorybookConfig } from "@storybook/vue3-vite";
 
 const config: StorybookConfig = {
@@ -8,11 +7,10 @@ const config: StorybookConfig = {
 			name: "@storybook/addon-essentials",
 			options: { backgrounds: false, controls: false, actions: false },
 		},
-		// getAbsolutePath("@storybook/addon-a11y"),
-		// "@chromatic-com/storybook",
+		"@storybook/addon-a11y",
 	],
 	framework: {
-		name: getAbsolutePath("@storybook/vue3-vite"),
+		name: "@storybook/vue3-vite",
 		options: {},
 	},
 	core: {
@@ -36,7 +34,3 @@ const config: StorybookConfig = {
 };
 
 export default config;
-
-function getAbsolutePath(value: string): string {
-	return dirname(require.resolve(join(value, "package.json")));
-}
