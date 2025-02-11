@@ -1,5 +1,9 @@
 import { expect, test } from "@playwright/test";
-import { type PackageName, gotoStory } from "../../components/utils";
+import {
+	type PackageName,
+	gotoStory,
+	testA11yWithAttachedResults,
+} from "../../components/utils";
 
 const packages: PackageName[] = ["react", "vue", "solid"];
 
@@ -15,6 +19,14 @@ for (const packageName of packages) {
 				"https://avatars.githubusercontent.com/u/1846056?v=4",
 			);
 			await expect(page).toHaveScreenshot();
+		});
+		test("has no a11y violations", async ({ page }, testInfo) => {
+			const accessibilityScanResults = await testA11yWithAttachedResults(
+				page,
+				testInfo,
+				"avatar",
+			);
+			await expect(accessibilityScanResults.violations).toEqual([]);
 		});
 	});
 }
