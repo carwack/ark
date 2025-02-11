@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
-import { gotoStory } from "../../components/utils";
+import { type PackageName, gotoStory } from "../../components/utils";
 
-const packages: ["react", "vue"] = ["react", "vue"];
+const packages: PackageName[] = ["react", "vue", "solid"];
 
 for (const packageName of packages) {
 	test.describe(`${packageName}: basic variant`, () => {

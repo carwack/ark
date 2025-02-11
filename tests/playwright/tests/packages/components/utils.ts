@@ -1,14 +1,14 @@
 import type { Page } from "@playwright/test";
 
+export type PackageName = "react" | "vue" | "solid";
+
 export const gotoStory = async (
 	storyId: string,
 	variantId: string,
 	page: Page,
-	packageName: "react" | "vue",
+	packageName: PackageName,
 ) => {
 	if (!storyId || !variantId || !packageName) await page.goto("/");
-
-	// Using the sandbox to isolate the story from the rest of Histoire.
 
 	// example urls:
 	// Vue: http://localhost:6007/iframe.html?globals=&id=components-avatar--basic&viewMode=story
@@ -23,6 +23,14 @@ export const gotoStory = async (
 			await page.goto(
 				`http://localhost:6007/iframe.html?id=components-${storyId}--${variantId}&viewMode=story`,
 			);
+			break;
+		case "solid":
+			await page.goto(
+				`http://localhost:6008/iframe.html?id=components-${storyId}--${variantId}&viewMode=story`,
+			);
+			break;
+		default:
+			await page.goto("/");
 			break;
 	}
 };

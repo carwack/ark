@@ -9,21 +9,6 @@ import { defineConfig, devices } from "@playwright/test";
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 /**
- * Retrieve the port from the environment.
- * - If process.env.PORT is defined and a valid number, use it.
- * - Otherwise, default to port 3000.
- *
- * This also makes it clear which port is in use, and allows for easy modification.
- */
-// const port =
-// 	process.env.PORT && !Number.isNaN(Number(process.env.PORT))
-// 		? process.env.PORT
-// 		: "3000";
-
-// const packageName = process.env.PACKAGE_NAME && !(process.env.PACKAGE_NAME)
-//   ? process.env.PACKAGE_NAME
-//   : 'react';
-/**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
@@ -104,6 +89,12 @@ export default defineConfig({
 		{
 			command: "bun vue:storybook",
 			url: "http://localhost:6007",
+			timeout: 120 * 1000,
+			reuseExistingServer: !process.env.CI,
+		},
+		{
+			command: "bun solid:storybook",
+			url: "http://localhost:6008",
 			timeout: 120 * 1000,
 			reuseExistingServer: !process.env.CI,
 		},
