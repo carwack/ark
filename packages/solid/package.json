@@ -108,7 +108,7 @@
 		"test": "vitest",
 		"test:ci": "vitest --run",
 		"typecheck": "tsc",
-		"storybook": "storybook dev -p 6008",
+		"storybook": "storybook dev -p 6006",
 		"release-it": "release-it --config ../../release-it.json",
 		"prepack": "clean-package",
 		"postpack": "clean-package restore"
@@ -194,9 +194,9 @@
 		"@zag-js/stringify-state": "0.82.1",
 		"clean-package": "2.2.0",
 		"esbuild-plugin-solid": "0.6.0",
-		"globby": "14.0.2",
+		"globby": "14.1.0",
 		"jsdom": "25.0.1",
-		"lucide-solid": "0.474.0",
+		"lucide-solid": "0.475.0",
 		"release-it": "17.11.0",
 		"resize-observer-polyfill": "1.5.1",
 		"solid-js": "1.9.4",
@@ -206,7 +206,7 @@
 		"tsup": "8.3.6",
 		"typescript": "5.7.3",
 		"vite": "5.4.14",
-		"vite-plugin-solid": "2.11.0",
+		"vite-plugin-solid": "2.11.1",
 		"vitest": "3.0.5"
 	},
 	"peerDependencies": {

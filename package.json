@@ -2,7 +2,7 @@
 	"name": "root",
 	"type": "module",
 	"private": true,
-	"workspaces": ["packages/*", "tests/*", "scripts", "website"],
+	"workspaces": ["packages/*", "scripts", "website"],
 	"scripts": {
 		"postinstall": "lefthook install",
 		"build": "turbo run build --filter='!./templates/**' --filter='!./website/**'",
@@ -29,7 +29,7 @@
 		"@biomejs/biome": "1.9.4",
 		"@types/bun": "1.2.2",
 		"lefthook": "1.10.10",
-		"prettier": "3.4.2",
+		"prettier": "3.5.0",
 		"prettier-plugin-svelte": "3.3.3",
 		"turbo": "2.4.0",
 		"typescript": "5.7.3",
