@@ -87,14 +87,14 @@ export default defineConfig({
 			reuseExistingServer: !process.env.CI,
 		},
 		{
-			command: "bun vue:storybook",
+			command: "bun solid:storybook",
 			url: "http://localhost:6007",
 			timeout: 120 * 1000,
 			reuseExistingServer: !process.env.CI,
 		},
 		{
-			command: "bun solid:storybook",
-			url: "http://localhost:6008",
+			command: "bun vue:storybook",
+			url: "http://localhost:6009",
 			timeout: 120 * 1000,
 			reuseExistingServer: !process.env.CI,
 		},

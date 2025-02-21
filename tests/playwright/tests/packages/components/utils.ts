@@ -20,14 +20,14 @@ export const gotoStory = async (
 				`http://localhost:6006/iframe.html?id=components-${storyId}--${variantId}&viewMode=story`,
 			);
 			break;
-		case "vue":
+		case "solid":
 			await page.goto(
 				`http://localhost:6007/iframe.html?id=components-${storyId}--${variantId}&viewMode=story`,
 			);
 			break;
-		case "solid":
+		case "vue":
 			await page.goto(
-				`http://localhost:6008/iframe.html?id=components-${storyId}--${variantId}&viewMode=story`,
+				`http://localhost:6009/iframe.html?id=components-${storyId}--${variantId}&viewMode=story`,
 			);
 			break;
 		default:
