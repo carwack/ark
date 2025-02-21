@@ -34,3 +34,11 @@
 @import url('./styles/tooltip.css');
 @import url('./styles/tour.css');
 @import url('./styles/tree-view.css');
+
+/* Match styling of story to Storybook */
+.histoire-generic-render-story {
+  margin: 0;
+  padding: 1rem;
+  display: block;
+  box-sizing: border-box;
+}
